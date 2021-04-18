@@ -1,0 +1,44 @@
+body{
+    /* background-color: rgb(10, 25, 47) !important; */
+}
+
+.center-image{
+    justify-content: center;
+}
+
+.has-image-centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ex-links{
+      text-align: center !important;
+  }
+
+  .ex-links a{
+    text-decoration: none;
+    color: rgb(136, 146, 176);
+
+  }
+
+  a:hover 
+{
+     color:white; 
+} 
+
+.shadow{
+    box-shadow: 0px 3px 15px rgb(0 0 0 / 20%);
+}
+
+.sidebar {
+    background-color: rgb(23, 42, 69);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    color: rgb(136, 146, 176);
+    opacity: 1;
+}
+.name-title{
+    font-weight: 600;
+    color: rgb(230, 241, 255);}
