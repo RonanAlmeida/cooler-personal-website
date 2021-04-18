@@ -1,5 +1,7 @@
 body {
-  background-color: #E0E0E0 !important;
+  /* background-color: #E0E0E0 !important; */
+  background-color: #bbbbbb !important;
+
 }
 
 .center-image {
@@ -18,6 +20,12 @@ body {
  a {
   text-decoration: none;
   color: rgb(136, 146, 176);
+  transition: 0.3s;
+}
+
+.resume-title a {
+    text-decoration: none;
+    /* color:white !important; */
 }
 
 a:hover {
@@ -39,7 +47,7 @@ a:hover {
   display: flex;
   align-items: center;
   flex-direction: column;
-  border-radius: 5px;
+  border-radius: 7px;
   color: rgb(136, 146, 176);
   opacity: 1;
 }
