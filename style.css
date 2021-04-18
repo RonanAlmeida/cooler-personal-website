@@ -55,3 +55,25 @@ a:hover {
   font-weight: 600;
   color: rgb(230, 241, 255);
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #979797;
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #121212; 
+  transition: 0.3s;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #303030; 
+}
