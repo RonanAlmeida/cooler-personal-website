@@ -83,8 +83,8 @@ a:hover {
   color: #4fbaff;
 }
 .resume-title {
-  text-decoration: underline;
-  text-underline-position: under; 
+  /* text-decoration: underline; */
+  /* text-underline-position: under;  */
    /* background-image: -webkit-gradient(
     linear,
     left top,
