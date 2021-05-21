@@ -27,12 +27,19 @@
     </script>
 
     <!-- imports -->
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+
     <script src="index.js" defer></script>
+
 
 
 
@@ -45,17 +52,32 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="mx-4 my-4 column is-3  sidebar shadow">  
+
+                <!-- mode button -->
+                <div class="mode-container has-text-centered">
+                    <button id="btn-color" value='1' class="button"> <i class="fas fa-moon"></i> </button>
+                </div>
+
+
+                <div class="mx-4 my-4 column is-3  sidebar shadow">
 
                     <!-- <div class="column">
                         <h2 class=" has-text-centered is-size-6 is-uppercase has-text-weight-medium topTitle">About</h2>
 
                     </div> -->
-                                      
+
+
+
+                    <!-- <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox" />
+                            <div class="slider round"></div>
+                        </label>
+                    </div>  -->
+
                     <figure class="mb-1 image is-128x128  has-image-centered">
-                        
+
                         <img class="is-rounded "
-                           
                             src="https://media-exp1.licdn.com/dms/image/C4E03AQGqU57gHqf0aw/profile-displayphoto-shrink_400_400/0/1619038007554?e=1624492800&v=beta&t=C7hRj5TsQ92989HDfvivAOmgObxgLusVq46rpzWnE9U">
                     </figure>
                     <h2 class=" has-text-weight-semibold has-text-centered name-title ">Ronan Almeida</h2>
@@ -73,12 +95,12 @@
                                 class="fas fa-envelope"></i></a>
                     </div>
 
-                    <h2 class=" my-2 is-size-6 is-uppercase has-text-weight-medium  has-text-centered resume-title">
-                        <a target="_blank" href="documents/RonanAlmeidaResume.pdf">resume</a>
+                    <h2 class=" my-2 is-size-6 is-uppercase has-text-weight-medium  has-text-centered">
+                        <a target="_blank" class="project-link" href="documents/RonanAlmeidaResume.pdf">resume</a>
                         <!-- href="documents/RonanAlmeidaResume.pdf" -->
 
                     </h2>
-
+ 
                     <!-- <h2 class=" my-2 is-size-6 is-uppercase has-text-weight-medium  has-text-centered resume-title">
                         <a target="_blank" href="documents/RonanAlmeidaResume.pdf">                    <button class="btnItem button is-warning is-focused  is-uppercase has-text-weight-medium"> resume</button>
                         </a>
@@ -97,7 +119,8 @@
 
                             <h2 class="is-size-6 my-1">
                                 I'm a third year Computer Science student at Queen's University and I have a passion
-                                for product development. This summer I will be interning at LinkedIn as a UI Engineer Intern, in the
+                                for product development. This summer I will be interning at LinkedIn as a UI Engineer
+                                Intern, in the
                                 past I've worked on the development of data analytics based applications.
                             </h2>
                             <h2 class="is-size-6 mt-5"> View some of my notable projects below 🧡</h2>
@@ -123,7 +146,7 @@
                 <div class="mx-4 my-4  column  project-desc px-5 py-5  sidebar shadow ">
                     <h2 class=" has-text-left is-size-6 is-uppercase has-text-weight-medium topTitle">Web App</h2>
 
-                    <h2 class=" has-text-left is-size-4 has-text-weight-medium name-title">Reddit Stock App 📈 
+                    <h2 class=" has-text-left is-size-4 has-text-weight-medium name-title">Reddit Stock App 📈
                     </h2>
 
                     <h2 class="is-size-6 my-1">
@@ -138,10 +161,9 @@
                         <span class="tag">Flask</span>
                         <span class="tag ">Reddit API</span>
                     </div>
-                    <h2 class=" my-2 is-size-6 is-uppercase has-text-weight-medium name-title"> <a
-                            target="_blank" href="https://github.com/RonanAlmeida/reddit-stock-app"
-                            class="project-link">  view
-                            project 
+                    <h2 class=" my-2 is-size-6 is-uppercase has-text-weight-medium name-title"> <a target="_blank"
+                            href="https://github.com/RonanAlmeida/reddit-stock-app" class="project-link"> view
+                            project
                         </a>
 
                     </h2>
@@ -166,20 +188,20 @@
                         <span class="tag">Node.js</span>
                         <span class="tag ">Spotify Web API</span>
                     </div>
-                    <h2 class=" my-2 is-size-6 is-uppercase has-text-weight-medium name-title"> <a
-                            target="_blank" href="https://ronanalmeida.github.io/higher-lower-stats/"
-                            class="project-link"> view
+
+                    <class class=" my-2 is-size-6 is-uppercase has-text-weight-medium name-title"> <a target="_blank"
+                            href="https://ronanalmeida.github.io/higher-lower-stats/" class="project-link"> view
                             project
                         </a>
-                    </h2>
+                    </class>
                     <figure class="image ">
                         <img src="images/spotifyimg.png">
                     </figure>
+
+
+
                 </div>
-                
-   
-            </div>
-            <!-- <div class="columns my-1">
+                <!-- <div class="columns my-1">
       
                 <div class="mx-4 my-4  column  sidebar shadow">
                     <div class="columns">
@@ -248,7 +270,7 @@
                 </div>
             </div> -->
 
-        </div>
+            </div>
 
     </section>
 
@@ -257,11 +279,23 @@
     <footer>
         <div class="center-content has-text-centered my-2">
             <!-- <p class=""></p> -->
-            <p class="footer-item">© Ronan Almeida 2021</p> 
+            <p class="footer-item">© Ronan Almeida 2021</p>
             <!-- | powered by city pop & lofi 📀</p> -->
 
         </div>
     </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+    <script>
+        bulmaCarousel.attach('#carousel-demo', {
+            slidesToScroll: 1,
+            slidesToShow: 1
+        });
+    </script>
+    </div>
+
     <script>
 
     </script>

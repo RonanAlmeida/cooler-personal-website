@@ -1,13 +1,35 @@
+:root {
+  --primary-color: #12141d;
+  --secondary-color: #1e2028;
+  --font-color: #f9f9fa;
+  --accent: #4fbaff;
+  --font-sidebar: #8f9094;
+  --cube-color: #f9f9fa;
+  --grad-before:#42d3ee;
+  --grad-after:#4fbcff;
+}
+
+[data-theme="light"] {
+  --primary-color: #f7f7f7  ;
+  --secondary-color: #fff;
+  --font-color: #000000;
+  --accent: #1e2028;
+  --font-sidebar: #464242;
+  --cube-color: #000000;
+
+  --grad-before:#504f4f;
+  --grad-after:#0c0c0c;
+}
+
 body,
 html {
-  /* background-color: #E0E0E0 !important; */
-  background-color: #12141d !important;
-  /* rgb(230, 241, 255); */
-  /* white; */
-  /* #bbbbbb !important; */
+  background-color: var(--primary-color) !important;
   animation: fadeInAnimation ease 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  transition: background 0.3s linear;
+	/* transform: scale(1.5); */
+
 }
 
 @keyframes fadeInAnimation {
@@ -23,29 +45,34 @@ html {
     linear,
     left top,
     right top,
-    from(#42d3ee),
-    to(#4fbcff)
+    from( var(--grad-before)),
+    to(var(--grad-after))
   );
-  background-image: linear-gradient(90deg, #42d3ee, #4fbcff);
+  background-image: linear-gradient(90deg,  var(--grad-before), var(--grad-after));
 
   font-weight: 600;
-  color: #f9f9fa !important;
+  color: var(--font-color) !important;
 }
 .tag {
-  /* background-color:  #f9f9fa  !important; */
   background-image: -webkit-gradient(
     linear,
     left top,
     right top,
-    from(#42d3ee),
-    to(#4fbcff)
+    from( var(--grad-before)),
+    to(var(--grad-after))
   );
-  background-image: linear-gradient(90deg, #42d3ee, #4fbcff);
+  background-image: linear-gradient(90deg,  var(--grad-before), var(--grad-after));
   color: #f9f9fa !important;
   font-weight: 600;
 }
 .center-image {
   justify-content: center;
+}
+
+.shadow {
+  -webkit-box-shadow: 0 5px 10px rgb(0 0 0 / 55%);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.55);
+  box-shadow: 0px 3px 15px rgb(0 0 0 / 20%);
 }
 
 .has-image-centered {
@@ -58,34 +85,35 @@ html {
 }
 
 .topTitle {
-  color: #4fbaff !important;
+  color: var(--accent) !important;
 }
 .project-link {
   text-decoration: none;
-  color: #f9f9fa;
+  color: var(--font-color);
   transition: 0.3s;
-  text-decoration: underline;
-  text-underline-position: under; 
+
 }
 .project-link:hover {
   /* text-decoration: none; */
   /* color: rgb(136, 146, 176); */
-  color: #4fbaff;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-position: under;
 }
 a {
   text-decoration: none;
-  color: #f9f9fa;
+  color: var(--font-color);
 
   transition: 0.3s;
 }
 
 a:hover {
-  color: #4fbaff;
+  color: var(--accent);
 }
 .resume-title {
   /* text-decoration: underline; */
   /* text-underline-position: under;  */
-   /* background-image: -webkit-gradient(
+  /* background-image: -webkit-gradient(
     linear,
     left top,
     right top,
@@ -94,6 +122,13 @@ a:hover {
   );
   background-image: linear-gradient(90deg, #42d3ee, #4fbcff); */
   /* color: #4fbaff !important; */
+}
+
+.resume-title:hover{
+  color: var(--accent);
+
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 .resume-title a {
@@ -112,29 +147,37 @@ a:hover {
   /* box-shadow: 0px 3px 15px rgb(0 0 0 / 20%); */
 }
 .footer-item {
-  /* background-color: #121212; */
-  color: #f9f9fa;
+  color: var(--font-color);
   font-weight: 450;
 }
-#canvas {
-}
+
 .sidebar {
-  /* background-color: rgb(23, 42, 69); */
-  /* background-color:#212121; */
-  background-color: #1e2028;
-  /* background-color:#; */
-
-  /* background-color:#424242; */
-
+  background-color: var(--secondary-color);
   display: flex;
-  /* align-items: center; */
   flex-direction: column;
   border-radius: 12px;
-
-  color: hsla(0, 0%, 100%, 0.5);
+  /* color: hsla(0, 0%, 100%, 0.5); */
+  color: var(--font-sidebar);
   opacity: 1;
 }
 .name-title {
   font-weight: 600;
-  color: #f9f9fa;
+  color: var(--font-color);
+}
+#btn-color{
+  background-color: var(--font-color);
+  color:var(--primary-color);
+
+  transition: 0.3s;
+
+}
+.mode-container {
+  position: fixed;
+  visibility: visible;
+  bottom: 1.5rem;
+  left: 85vw;
+  border: 1px solid var(--border);
+  background: var(--bottom-nav-bg);
+  padding: 1.25rem;
+  z-index: 999999;
 }
