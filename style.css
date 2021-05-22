@@ -10,15 +10,15 @@
 }
 
 [data-theme="light"] {
-  --primary-color: #f7f7f7  ;
-  --secondary-color: #fff;
-  --font-color: #000000;
-  --accent: #1e2028;
+  --primary-color: #f6f9fc  ;
+  --secondary-color: #ffff;
+  --font-color: #1b2330  ;
+  --accent: #1957f0  ;
   --font-sidebar: #464242;
-  --cube-color: #000000;
+  --cube-color: #1b2330;
 
-  --grad-before:#504f4f;
-  --grad-after:#0c0c0c;
+  --grad-before:#1957f0;
+  --grad-after:#6591ff;
 }
 
 body,
