@@ -258,7 +258,6 @@ function drawFace(face) {
 
 requestAnimationFrame(update);
 
-const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 const currentTheme = localStorage.getItem('theme');
 const btnColor = document.querySelector("#btn-color")
 
@@ -269,7 +268,6 @@ if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
   
     if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
     }
 }
 
@@ -277,7 +275,8 @@ function switchTheme(e) {
 
     if (btnColor.value=='0') {
         document.documentElement.setAttribute('data-theme', 'dark');
-        btnColor.innerHTML="<i class='fas fa-moon'></i>"
+                btnColor.innerHTML="<i class='fas fa-sun'></i>"
+
         // localStorage.setItem('theme', 'dark');
         btnColor.value='1'
         requestAnimationFrame(update);
@@ -285,7 +284,7 @@ function switchTheme(e) {
     }
     else {      
         document.documentElement.setAttribute('data-theme', 'light');
-        btnColor.innerHTML="<i class='fas fa-sun'></i>"
+        btnColor.innerHTML="<i class='fas fa-moon'></i>"
 
           // localStorage.setItem('theme', 'light');
           btnColor.value='0'
