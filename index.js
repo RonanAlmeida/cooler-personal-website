@@ -244,12 +244,10 @@ function drawFace(face) {
   ctx.lineTo(p3.x, p3.y);
   ctx.lineTo(p4.x, p4.y);
   ctx.closePath();
-  if (btnColor.value=='0'){
+  if (btnColor.value == "0") {
     ctx.strokeStyle = "black";
-
-  }else{
+  } else {
     ctx.strokeStyle = "#f9f9fa";
-
   }
   // ctx.strokeStyle = "var(--cube-color);";
 
@@ -258,37 +256,33 @@ function drawFace(face) {
 
 requestAnimationFrame(update);
 
-const currentTheme = localStorage.getItem('theme');
-const btnColor = document.querySelector("#btn-color")
+const currentTheme = localStorage.getItem("theme");
+const btnColor = document.querySelector("#btn-color");
 
-
-btnColor.addEventListener('click',switchTheme);
+btnColor.addEventListener("click", switchTheme);
 
 if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
-  
-    if (currentTheme === 'dark') {
-    }
+  document.documentElement.setAttribute("data-theme", currentTheme);
+
+  if (currentTheme === "dark") {
+  }
 }
 
 function switchTheme(e) {
+  if (btnColor.value == "0") {
+    document.documentElement.setAttribute("data-theme", "dark");
+    btnColor.innerHTML = "<i class='fas fa-sun'></i>";
 
-    if (btnColor.value=='0') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-                btnColor.innerHTML="<i class='fas fa-sun'></i>"
+    // localStorage.setItem('theme', 'dark');
+    btnColor.value = "1";
+    requestAnimationFrame(update);
+  } else {
+    document.documentElement.setAttribute("data-theme", "light");
+    btnColor.innerHTML = "<i class='fas fa-moon'></i>";
 
-        // localStorage.setItem('theme', 'dark');
-        btnColor.value='1'
-        requestAnimationFrame(update);
-
-    }
-    else {      
-        document.documentElement.setAttribute('data-theme', 'light');
-        btnColor.innerHTML="<i class='fas fa-moon'></i>"
-
-          // localStorage.setItem('theme', 'light');
-          btnColor.value='0'
-          requestAnimationFrame(update);
-
-    }    
+    // localStorage.setItem('theme', 'light');
+    btnColor.value = "0";
+    requestAnimationFrame(update);
+  }
 }
+
